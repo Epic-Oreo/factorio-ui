@@ -1,18 +1,36 @@
 {
   "include": [
-    "declarations.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx", 
     ".ladle/*"
   ],
-    "exclude": [
+  "exclude": [
     "node_modules"
   ],
   "compilerOptions": {
+    "target": "es2015",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "jsx": "react-jsx",
     "skipLibCheck": true,
+    "module": "ESNext",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   }
 }

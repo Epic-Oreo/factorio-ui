@@ -1,20 +1,44 @@
 {
-  "name": "factorio-ui",
+  "name": "@oskarlaing/factorio-ui",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
   "dependencies": {
     "@ladle/react": "^5.1.1",
-    "@tailwindcss/postcss": "^4.3.3",
-    "@types/react-dom": "^19.2.4",
-    "postcss": "^8.5.25",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "tailwind-merge": "^3.6.0",
-    "tailwindcss": "^4.3.3"
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
+    "@rollup/plugin-babel": "^7.1.0",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/react": "^19.2.18",
-    "typescript": "^7.0.2"
+    "@types/react-dom": "^19.2.4",
+    "@typescript/typescript6": "^6.0.2",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.26",
+    "rollup": "^4.62.4",
+    "rollup-plugin": "^1.0.0",
+    "rollup-plugin-dts": "^6.5.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^4.3.3",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7"
+  },
+  "peerDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   }
 }
