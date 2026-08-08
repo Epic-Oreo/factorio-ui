@@ -7,7 +7,6 @@ import dts from "rollup-plugin-dts";
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { babel } from '@rollup/plugin-babel';
 
-
 const packageJson = require("./package.json");
 
 export default [
@@ -15,9 +14,10 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.module,
+        // file: packageJson.module,
+        file: "dist/index.esm.js",
         format: "esm",
-        sourcemap: true,
+        sourcemap: false,
         // plugins: [
         //   typescript({
         //     tsconfig: "./tsconfig.json",
@@ -26,40 +26,47 @@ export default [
         //   }),
         // ]
       },
+      {
+        file: "dist/index.js",
+        format: "cjs",
+        sourcemap: false
+      }
     ],
     plugins: [
+      postcss({
+        extract: true,
+        minimize: true,
+      }),
+
       resolve({
         ignoreGlobal: false,
         include: ['node_modules/**'],
         skip: ['react', 'react-dom'],
       }),
-      // babel({
-      //   extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      //   babelHelpers: 'bundled',
-      //   presets: ['@babel/preset-react', '@babel/preset-typescript']
-      // }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        declaration: true,
+        declarationDir: 'dist/types'
+      }),
+      babel({
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        babelHelpers: 'bundled',
+        exclude: "node_modules/**"
+      }),
       // nodeResolve({
       //   extensions: ['.ts', '.tsx', '.js', '.jsx']
       // }),
       commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-        declaration: true,
-        declarationDir: 'dist/esm/types'
-      }),
-      postcss({
-        extract: true,
-        minimize: true,
-      }),
+
       terser(),
     ],
   },
-  {
-    input: "dist/esm/types/src/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts.default()],
-    external: [/\.css$/],
-  },
+  // {
+  //   input: "dist/esm/types/src/index.d.ts",
+  //   output: [{ file: "dist/index.d.ts", format: "esm" }],
+  //   plugins: [dts.default()],
+  //   external: [/\.css$/],
+  // },
   {
     input: "src/global.css",
     output: [{ file: "dist/index.css", format: "es" }],
