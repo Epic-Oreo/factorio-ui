@@ -1,1 +1,3 @@
-export { Window, WindowContent, WindowDrag, WindowHeader, WindowHeaderButton, WindowHeaderText } from "./window";
+// export { Window,  } from ".WindowContent, WindowDrag, WindowHeader, WindowHeaderButton, WindowHeaderText/window";
+
+export { Window } from "./Window";
