@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@emotion/css": "^11.13.5",
-    "@emotion/styled": "^11.14.1",
     "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "tailwind-merge": "^3.6.0"
   },
   "exports": {
@@ -52,6 +52,7 @@
     "rollup": "^4.62.4",
     "rollup-plugin-dts": "^6.5.1",
     "tailwindcss": "^4.3.3",
+    "terser": "^5.50.0",
     "tsup": "^8.5.1",
     "typescript": "^7.0.2"
   },

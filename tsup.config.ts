@@ -9,6 +9,7 @@ export default defineConfig({
 	dts: false,
 	sourcemap: true,
 	clean: true,
+  minify: "terser",
 	treeshake: true,
 	splitting: false,
 	// theme-ui/jsx-runtime is intentionally NOT externalized: its package
