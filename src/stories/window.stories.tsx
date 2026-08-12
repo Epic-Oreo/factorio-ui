@@ -1,23 +1,23 @@
-// import { Window, WindowContent, WindowDrag, WindowHeader, WindowHeaderButton, WindowHeaderText } from "@/components/window"
-// import "@/global.css"
+import { Window, WindowContent, WindowDrag, WindowHeader, WindowHeaderButton, WindowHeaderText } from "@/components/Window/window"
+import "@/global.css"
 
 export const WindowStory = () => (
-  <div>tmp</div>
-//   <Window>
-//     <WindowHeader>
-//       <WindowHeaderText>
-//         Settings
-//       </WindowHeaderText>
 
-//       <WindowDrag/>
+  <Window>
+    <WindowHeader>
+      <WindowHeaderText>
+        Settings
+      </WindowHeaderText>
 
-//       <WindowHeaderButton>
-//         X
-//       </WindowHeaderButton>
-//     </WindowHeader>
+      <WindowDrag/>
 
-//     <WindowContent>
-//       Content
-//     </WindowContent>
-//   </Window>
+      <WindowHeaderButton>
+        X
+      </WindowHeaderButton>
+    </WindowHeader>
+
+    <WindowContent>
+      Content
+    </WindowContent>
+  </Window>
 );

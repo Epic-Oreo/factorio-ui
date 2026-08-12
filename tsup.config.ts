@@ -16,7 +16,7 @@ export default defineConfig({
 	// resolve a bare `theme-ui/jsx-runtime` import. Bundling it inline keeps
 	// `npm install retro-react` truly zero-config for consumers.
 	noExternal: [/^theme-ui\/jsx-runtime/],
-	external: ['react', 'react-dom'],
+	external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
 	loader: { '.svg': 'dataurl' },
 	// Mark the whole bundle as a client module so it works inside React Server
 	// Components / Next.js App Router without forcing every consumer to add

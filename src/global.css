@@ -11,8 +11,6 @@
   font-style: normal;
 }
 
-
-
 /* --menu-background = #313031 */
 
 .hover-remove-bg-image:hover {
@@ -31,16 +29,29 @@
   --color-glow-shadow: #f9b44b;
   --color-button-glow: #e39827;
   --color-button-glow-active: #f1be64;
+  --color-button-glow-dark: #432400;
 
   --color-green-button: #5eb663;
   --color-green-button-glow: #34be3c;
+  --color-green-button-active: #cfdf93;
 
+  --color-gray-button: #8e8e8e;
 
-
+  --spacing-standard-button-height: 36px;
 
 }
+
+@utility shadow-outset {
+  box-shadow: inset 8px 0px 4px -8px #000,inset -8px 0px 4px -8px #000,inset 0px 10px 2px -8px #e3e3e3,inset 0px 10px 2px -8px #282828,inset 0px -9px 2px -8px #000,0px 0px 4px 0px #000;
+}
+
+@utility shadow-outset-green {
+  box-shadow: inset 8px 0px 4px -8px #000, inset -8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,0px 0px 4px 0px #000;
+}
+
 @utility border-outset {
   border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAABhWlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw1AUhU9bpSIVETuICAasulgQFXHUKhShQqgVWnUweekfNGlIUlwcBdeCgz+LVQcXZ10dXAVB8AfE0clJ0UVKvC8ptIjxwuN9nHfP4b37AH+txFSzbRxQNctIxmNCOrMqBF/hwyB6MIohiZn6nCgm4Flf99RNdRflWd59f1aXkjUZ4BOIZ5luWMQbxNObls55nzjMCpJCfE48ZtAFiR+5Lrv8xjnvsJ9nho1Ucp44TCzkW1huYVYwVOIp4oiiapTvT7uscN7irJYqrHFP/sJQVltZ5jqtAcSxiCWIECCjgiJKsBClXSPFRJLOYx7+fscvkksmVxGMHAsoQ4Xk+MH/4PdszdzkhJsUigHtL7b9MQwEd4F61ba/j227fgIEnoErrekv14CZT9KrTS1yBHRvAxfXTU3eAy53gL4nXTIkRwrQ8udywPsZfVMG6L0FOtfcuTXOcfoApGhWiRvg4BAYyVP2use7O1rn9m9PY34/opByuh0Yaa8AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmAgIQJSQU1l6SAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAALpQTFRFZGJhY2BgYF1cXVpZXFpZXFpYW1hXWlVSV1JQT01MT0xLT0pJTUdETUZDSEJBPDk4PDg3PzYzPzYxOzc2OzYzNi8sMTAxMTAwMS8wMS8vMS4vMC4uMC0tMCwsMCwrMCsqLyooMSYhLCclLCYlLiUhLCUkKCEfJSIhJyEeJSEhJyAdJCEfJCAeJx0aIx0bIxwZIxsYIxoXIBoXHhYUFQ8NEw4NDw4NEQ0MEA0MDw0NDAkHBQQDAwICAAAAeCdZ2wAAAAFiS0dECfHZpewAAACCSURBVHhebY9LDsMwCAXh+RdUiCPl/lc1EXa8aNWRjR6zAWANTBtGM5RSS8kpyDOjR62LMB16N5HXiLRbkeulaqarXDXDx/CxiQY03H25GQhORL6JDPrlj4mFeTPXJkREMAOBgdVPN98hqvp5vxwAJ9HTemCnSmLEgbktcpwMfM8HHrGVLy5TM6g2AAAAAElFTkSuQmCC") 8/4px repeat;
+  box-shadow: none;
 }
 
 @utility border-inset {
@@ -49,12 +60,11 @@
   box-shadow: none;
 }
 
-
 @utility glow-button {
   @apply text-main-text-inverse outline-0 bg-button-glow;
   border-image: none;
 	text-decoration: none;
-	box-shadow: inset 8px 0px 4px -8px #000,inset -8px 0px 4px -8px #000,inset 0px 9px 2px -8px #fff,inset 0px 8px 4px -8px #000,inset 0px -8px 4px -8px #000,inset 0px -9px 2px -8px #432400,0px 0px 4px 0px #000,inset 0px 0px 4px 2px var(--color-glow-shadow);
+	box-shadow: inset 8px 0px 4px -8px #000,inset -8px 0px 4px -8px #000,inset 0px 9px 2px -8px #fff,inset 0px 8px 4px -8px #000,inset 0px -8px 4px -8px #000,inset 0px -9px 2px -8px var(--color-button-glow-dark),0px 0px 4px 0px #000,inset 0px 0px 4px 2px var(--color-glow-shadow);
 	filter: drop-shadow(0 0 2px var(--color-glow-shadow)); 
 }
 
@@ -62,17 +72,22 @@
   @apply text-main-text-inverse outline-0 bg-button-glow-active;
   border-image: none;
 	text-decoration: none;
-	box-shadow: inset 8px 0px 4px -8px #000,inset -8px 0px 4px -8px #000,inset 0px 9px 2px -8px #fff,inset 0px 8px 4px -8px #000,inset 0px -8px 4px -8px #000,inset 0px -9px 2px -8px #432400,0px 0px 4px 0px #000,inset 0px 0px 4px 2px var(--color-glow-shadow);
+	box-shadow: inset 8px 0px 4px -8px #000,inset -8px 0px 4px -8px #000,inset 0px 9px 2px -8px #fff,inset 0px 8px 4px -8px #000,inset 0px -8px 4px -8px #000,inset 0px -9px 2px -8px var(--color-button-glow-dark),0px 0px 4px 0px #000,inset 0px 0px 4px 2px var(--color-glow-shadow);
 	filter: none;
 }
 
-@utility glow-yellow-button {
-  @apply text-main-text-inverse outline-0;
+@utility glow-button-green {
+  @apply text-main-text-inverse outline-0 bg-green-button;
   border-image: none;
 	text-decoration: none;
-	box-shadow: inset 8px 0px 4px -8px #000,inset -8px 0px 4px -8px #000,inset 0px 9px 2px -8px #fff,inset 0px 8px 4px -8px #000,inset 0px -8px 4px -8px #000,inset 0px -9px 2px -8px #432400,0px 0px 4px 0px #000,inset 0px 0px 4px 2px var(--color-glow-shadow);
-	filter: drop-shadow(0 0 2px var(--color-glow-shadow)); 
-	background-color: #e39827;
+	filter: brightness(1.3) drop-shadow(0 0 2px #34be3c); 
+}
+
+@utility glow-button-green-inset {
+  @apply text-main-text-inverse outline-0 bg-green-button-active;
+  border-image: none;
+	text-decoration: none;
+	filter: none;
 }
 
 @utility drag-background {
