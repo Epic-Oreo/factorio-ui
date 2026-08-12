@@ -1,35 +1,9 @@
-import { type ComponentProps, type ReactNode } from "react";
-import { cn } from "@/utils/cn";
-import { type ClassValue } from "clsx";
+import { ComponentProps, type ReactNode } from "react";
 
 import styled from '@emotion/styled';
 import { glow, palette, shadows } from "@/theme";
 
 type ColorVariant = "gray" | "green" | "red";
-
-
-// const Button = ({
-//   children,
-//   className,
-//   variant="default",
-//   ...props
-// }: {
-//   children?: ReactNode;
-//   className?: ClassValue;
-//   variant?: ColorVariant
-//   props?: ComponentProps<"button">;
-// }) => {
-//   return (
-//     <button
-//       className=""
-//     >
-//       {children}
-//     </button>
-//   );
-// };
-
-// export { Button };
-
 
 const buttons =  {
   gray: {
@@ -62,18 +36,21 @@ const buttons =  {
   }
 }
 
-
 export const Button = ({
-  variant = "gray",
-  children
+  children,
+  variant="gray",
+  ...props
 }: {
-  variant?: ColorVariant
   children?: ReactNode;
-}) => (
-  <ButtonStyled $variant={variant}>
+  variant?: ColorVariant
+  props?: ComponentProps<"button">;
+}) => {
+  return (
+    <ButtonStyled {...props} $variant={variant}>
     {children}
   </ButtonStyled>
-)
+  );
+};
 
 
 const ButtonStyled = styled.button<{
