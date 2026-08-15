@@ -58,7 +58,7 @@ const palette = {
   },
   secondary: {
     main: "#e39827",
-    light: "#f1be64",
+    light: "#e9c072",
     contrastText: black
   },
   success: {
