@@ -1,9 +1,9 @@
 # Factorio Ui
 ## A UI library that replicates the Factorio game UI
 
-<center>
-  [Live Previews](https://epic-oreo.github.io/factorio-ui/)  
-</center>
+<div align="center">
+  <a href="https://epic-oreo.github.io/factorio-ui/">Live Previews</a>
+</div>
 
 
 > [!WARNING]
