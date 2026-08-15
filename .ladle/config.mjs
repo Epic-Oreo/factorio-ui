@@ -4,5 +4,6 @@ export default {
 
   outDir: "docs",
   defaultStory: "welcome--welcome",
-  storyOrder: ["welcome--welcome", "*"]
+  storyOrder: ["welcome--welcome", "*"],
+  base: "/factorio-ui/",
 };
