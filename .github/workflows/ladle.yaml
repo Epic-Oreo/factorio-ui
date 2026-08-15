@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-    paths: ['.storybook/**', 'src/components/**', 'src/stories/**'] # Trigger the action only when files change in the folders defined here
+    paths: ['.ladle/**', 'src/components/**', 'src/stories/**'] # Trigger the action only when files change in the folders defined here
 
 # Scope permissions to only what the deploy step needs.
 permissions:
