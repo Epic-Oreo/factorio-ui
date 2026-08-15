@@ -31,7 +31,7 @@ jobs:
         run: npm install -g yarn
 
       - name: Install dependencies 🔧
-        run: yarn add
+        run: yarn
 
       - name: Build production bundle
         run: yarn ladle-build
