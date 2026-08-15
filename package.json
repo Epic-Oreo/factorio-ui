@@ -11,12 +11,10 @@
   ],
   "scripts": {
     "rollup": "rollup -c",
-    "build:cjs": "swc ./src -d ./dist --config-file .swcrc",
-    "build:dts": "tsc --declaration --declarationMap --emitDeclarationOnly",
     "copy": "cp ./package.json ./dist/ && cp ./README.md ./dist/ && cp ./LICENSE ./dist/",
-    "build": "yarn build:cjs && yarn build:dts",
-    "run-tsup": "tsup && tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.mts",
-    "ladle": "ladle serve"
+    "build": "tsup && tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.mts",
+    "ladle-serve": "ladle serve",
+    "ladle-build": "ladle build"
   },
   "dependencies": {
     "@emotion/css": "^11.13.5",
