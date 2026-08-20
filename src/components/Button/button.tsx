@@ -18,6 +18,10 @@ interface ButtonStyleType {
     background: string;
     boxShadow: string;
   };
+
+  arrow: {
+    shadow: string;
+  };
 }
 
 const buttons = {
@@ -34,6 +38,10 @@ const buttons = {
       background: palette.secondary.light,
       boxShadow: shadows.orangeInShadow,
     },
+
+    arrow: {
+      shadow: "box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);",
+    },
   },
   green: {
     text: palette.common.black,
@@ -45,6 +53,10 @@ const buttons = {
     active: {
       background: palette.success.light,
       boxShadow: shadows.greenInShadow,
+    },
+
+    arrow: {
+      shadow: "box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);",
     },
   },
   red: {
@@ -59,6 +71,10 @@ const buttons = {
     active: {
       background: palette.error.lighter,
       boxShadow: shadows.redInShadow,
+    },
+
+    arrow: {
+      shadow: "",
     },
   },
 } as Record<string, ButtonStyleType>;
@@ -101,14 +117,14 @@ const ButtonStyled = styled.button<{
   font-size: 16px;
   color: ${(props) => buttons[props.$variant].text};
   background-color: ${(props) => buttons[props.$variant].background};
-  /* box-shadow: ${(props) => buttons[props.$variant].shadow}; */
-  box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);
-
+  box-shadow: ${(props) => buttons[props.$variant].shadow};
+  ${(props)=>props.$arrow && `
+    box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);
+  `}
 
   position: relative;
 
-  margin-right: ${(props)=>props.$arrow && "12px"};
-
+  margin-right: ${(props) => props.$arrow && "12px"};
 
   &:hover {
     background-color: ${(props) => buttons[props.$variant].hover.background};
@@ -125,7 +141,7 @@ const ButtonStyled = styled.button<{
 
   &::after {
     content: "";
-    display: ${(props)=>!props.$arrow && "none"};
+    display: ${(props) => !props.$arrow && "none"};
     position: absolute;
     width: 21px;
     height: 21px;
@@ -136,7 +152,10 @@ const ButtonStyled = styled.button<{
     right: 0px;
     z-index: -3;
     /* box-shadow: ${(props) => buttons[props.$variant].shadow}; */
-    box-shadow: inset -8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,1px -1px 4px 0px #000;
-  
+    box-shadow:
+      inset -8px 0px 4px -8px #000,
+      inset 0px 10px 2px -8px #95df99,
+      inset 0px 10px 2px -8px #163218,
+      1px -1px 4px 0px #000;
   }
 `;

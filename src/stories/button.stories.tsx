@@ -10,13 +10,13 @@ export const button = () => (
     </div>
 
     <div className="flex gap-2 flex-wrap">
-    <Button arrow>Default Button</Button>
+    {/* <Button arrow>Default Button</Button>
     <Button arrow variant={"green"}>
       Green Button
     </Button>
     <Button arrow variant={"red"}>
       Red Button
-    </Button>
+    </Button> */}
   </div>
   </div>
 );
