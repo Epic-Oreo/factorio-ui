@@ -1,1 +1,0 @@
-import{j as e}from"./index-GUXBK_0o.js";/* empty css               */const d=()=>e.jsx("div",{children:e.jsx("h1",{className:"text-3xl",children:"Factorio UI"})});typeof window<"u"&&window.document&&window.document.createElement&&document.documentElement.setAttribute("data-storyloaded","");export{d as Welcome};

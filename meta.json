@@ -32,8 +32,8 @@
       "levels": [
         "Welcome"
       ],
-      "locStart": 3,
-      "locEnd": 7,
+      "locStart": 11,
+      "locEnd": 31,
       "filePath": "src/stories/welcome.stories.tsx",
       "namedExport": "Welcome",
       "meta": {}
