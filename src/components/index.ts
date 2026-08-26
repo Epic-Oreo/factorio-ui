@@ -2,3 +2,4 @@
 
 export * from "./Window";
 export * from "./Button";
+export * from "./Select";

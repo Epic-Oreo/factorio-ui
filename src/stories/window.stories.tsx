@@ -1,5 +1,5 @@
 import {
-  Window,
+  Window as WindowBase,
   WindowContent,
   WindowDrag,
   WindowHeader,
@@ -8,9 +8,9 @@ import {
 } from "@/components/Window/window";
 import "@/global.css";
 
-export const WindowStory = () => (
+export const Window = () => (
   <div className="flex flex-col gap-2">
-    <Window>
+    <WindowBase>
       <WindowHeader>
         <WindowHeaderText>Settings</WindowHeaderText>
 
@@ -36,6 +36,6 @@ export const WindowStory = () => (
       </WindowHeader>
 
       <WindowContent>Content</WindowContent>
-    </Window>
+    </WindowBase>
   </div>
 );
