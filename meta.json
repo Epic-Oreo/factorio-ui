@@ -27,6 +27,17 @@
       "namedExport": "button",
       "meta": {}
     },
+    "select--select": {
+      "name": "Select",
+      "levels": [
+        "Select"
+      ],
+      "locStart": 6,
+      "locEnd": 17,
+      "filePath": "src/stories/select.stories.tsx",
+      "namedExport": "select",
+      "meta": {}
+    },
     "welcome--welcome": {
       "name": "Welcome",
       "levels": [
@@ -38,15 +49,15 @@
       "namedExport": "Welcome",
       "meta": {}
     },
-    "window--window-story": {
-      "name": "Window story",
+    "window--window": {
+      "name": "Window",
       "levels": [
         "Window"
       ],
       "locStart": 11,
       "locEnd": 41,
       "filePath": "src/stories/window.stories.tsx",
-      "namedExport": "WindowStory",
+      "namedExport": "Window",
       "meta": {}
     }
   }
