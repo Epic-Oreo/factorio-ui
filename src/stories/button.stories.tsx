@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button/button";
-import "@/global.css";
+import "./story.css";
 
 export const button = () => (
   <div className="flex flex-col gap-4">
