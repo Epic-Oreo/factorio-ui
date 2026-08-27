@@ -1,7 +1,7 @@
 import { ComponentProps, type ReactNode } from "react";
 
 import styled from "@emotion/styled";
-import { glow, palette, shadows } from "@/theme";
+import { elementResetStyle, glow, palette, shadows } from "@/theme";
 
 type ColorVariant = "gray" | "green" | "red";
 
@@ -40,7 +40,8 @@ const buttons = {
     },
 
     arrow: {
-      shadow: "box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);",
+      shadow:
+        "box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);",
     },
   },
   green: {
@@ -56,7 +57,8 @@ const buttons = {
     },
 
     arrow: {
-      shadow: "box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);",
+      shadow:
+        "box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);",
     },
   },
   red: {
@@ -108,6 +110,8 @@ const ButtonStyled = styled.button<{
   $variant: ColorVariant;
   $arrow: boolean;
 }>`
+  ${elementResetStyle.buttonAndInput};
+
   padding: 0px 12px;
   height: 36px;
   font-weight: 600;
@@ -118,7 +122,9 @@ const ButtonStyled = styled.button<{
   color: ${(props) => buttons[props.$variant].text};
   background-color: ${(props) => buttons[props.$variant].background};
   box-shadow: ${(props) => buttons[props.$variant].shadow};
-  ${(props)=>props.$arrow && `
+  ${(props) =>
+    props.$arrow &&
+    `
     box-shadow: inset 8px 0px 4px -8px #000,inset 0px 10px 2px -8px #95df99,inset 0px 10px 2px -8px #163218,inset 0px -9px 2px -8px #000,-4px 0px 4px 0px rgba(0,0,0,0.5);
   `}
 
