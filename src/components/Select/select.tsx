@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
-import { glow, palette, shadows } from "@/theme";
+import { elementResetStyle, glow, htmlResetStyle, palette, shadows } from "@/theme";
 
 export const Select = styled.select`
+  ${elementResetStyle.buttonAndInput}
   appearance: base-select;
   background-color: ${palette.primary.main};
   box-shadow: ${shadows.grayOutShadow};

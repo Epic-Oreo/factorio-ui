@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
-import { inBorder, outBorder, palette, shadows } from "@/theme";
+import { elementResetStyle, htmlResetStyle, inBorder, outBorder, palette, shadows } from "@/theme";
 
 
 const WindowHeaderText = styled.div`
+  ${htmlResetStyle}
+
   color: ${palette.menu.heading.text};
   font-size: 20px;
   flex-shrink: 0;
@@ -10,6 +12,8 @@ const WindowHeaderText = styled.div`
 
 
 const WindowHeader = styled.div`
+  ${htmlResetStyle}
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,6 +22,8 @@ const WindowHeader = styled.div`
 `
 
 const WindowDrag = styled.div<{}>`
+  ${htmlResetStyle}
+
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAA8CAMAAABy8zuxAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEhQTFRFIB8gISAhOTg5JCMkJSQlKCcoKSgpLCssLSwtODc4NzY3NjU1NTM0NDIyMjAxMS8vLy4vLSsrKigoKScnKygoKSYmLiwtLCoqWf/lzAAAAERJREFUeJzt0UkKgDAUBNGuxBgEEe9/UhGnfFtw7d5F8Q5QSNB6yOJoFLG9VLH+fAaTTDadKaY3NRjuCbOUCJaRM5jYLwWmND8cccluAAAAAElFTkSuQmCC");  
   background-repeat: repeat; 
   background-size: 4px 60px; 
@@ -26,6 +32,7 @@ const WindowDrag = styled.div<{}>`
 `
 
 const WindowHeaderButton = styled.button`
+  ${elementResetStyle.buttonAndInput}
   ${inBorder}
   
   width: 28px;
@@ -73,6 +80,7 @@ const WindowHeaderButton = styled.button`
 `
 
 const WindowContent = styled.div<{}>`
+  ${htmlResetStyle}
   background-color: ${palette.menu.insetBackground};
   padding: 8px;
   ${inBorder}
@@ -80,7 +88,7 @@ const WindowContent = styled.div<{}>`
 `;
 
 const Window = styled.div<{}>`
-
+  ${htmlResetStyle}
   background-color: ${palette.menu.background};
   color: ${palette.menu.text};
   padding: 8px;
