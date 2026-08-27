@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { elementResetStyle, glow, htmlResetStyle, palette, shadows } from "@/theme";
+import { elementResetStyle, glow, palette, shadows } from "@/theme";
 
 export const Select = styled.select`
   ${elementResetStyle.buttonAndInput}

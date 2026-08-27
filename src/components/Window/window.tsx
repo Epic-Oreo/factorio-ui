@@ -21,7 +21,7 @@ const WindowHeader = styled.div`
   gap: 8px;
 `
 
-const WindowDrag = styled.div<{}>`
+const WindowDrag = styled.div`
   ${htmlResetStyle}
 
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAA8CAMAAABy8zuxAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEhQTFRFIB8gISAhOTg5JCMkJSQlKCcoKSgpLCssLSwtODc4NzY3NjU1NTM0NDIyMjAxMS8vLy4vLSsrKigoKScnKygoKSYmLiwtLCoqWf/lzAAAAERJREFUeJzt0UkKgDAUBNGuxBgEEe9/UhGnfFtw7d5F8Q5QSNB6yOJoFLG9VLH+fAaTTDadKaY3NRjuCbOUCJaRM5jYLwWmND8cccluAAAAAElFTkSuQmCC");  
@@ -79,7 +79,7 @@ const WindowHeaderButton = styled.button`
   }
 `
 
-const WindowContent = styled.div<{}>`
+const WindowContent = styled.div`
   ${htmlResetStyle}
   background-color: ${palette.menu.insetBackground};
   padding: 8px;
@@ -87,7 +87,7 @@ const WindowContent = styled.div<{}>`
   min-height: 20px;
 `;
 
-const Window = styled.div<{}>`
+const Window = styled.div`
   ${htmlResetStyle}
   background-color: ${palette.menu.background};
   color: ${palette.menu.text};

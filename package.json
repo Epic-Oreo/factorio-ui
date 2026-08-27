@@ -14,7 +14,10 @@
     "copy": "cp ./package.json ./dist/ && cp ./README.md ./dist/ && cp ./LICENSE ./dist/",
     "build": "tsup && tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.mts",
     "ladle-serve": "ladle serve",
-    "ladle-build": "ladle build"
+    "ladle-build": "ladle build",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit",
+    "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
     "@emotion/css": "^11.13.5",
@@ -37,6 +40,10 @@
     "./styles.css": "./dist/index.css"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@eslint/css": "^1.4.0",
+    "@eslint/js": "^10.0.1",
     "@ladle/react": "^5.1.1",
     "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
@@ -48,6 +55,10 @@
     "@types/react-dom": "^19.2.4",
     "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.5.4",
+    "eslint": "^10.9.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^17.11.0",
+    "husky": "^9.1.7",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "rollup": "^4.62.4",
@@ -55,7 +66,9 @@
     "tailwindcss": "^4.3.3",
     "terser": "^5.50.0",
     "tsup": "^8.5.1",
-    "typescript": "^7.0.2"
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "typescript-eslint": "^8.68.0"
   },
   "peerDependencies": {
     "react": "^19.2.8"
