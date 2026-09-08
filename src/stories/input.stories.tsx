@@ -45,7 +45,8 @@ export const select = () => (
 
 
 export const Text = () => (
-  <div>
+  <div className="flex flex-wrap gap-4">
     <Input/>
+    <Input disabled/>
   </div>
 )

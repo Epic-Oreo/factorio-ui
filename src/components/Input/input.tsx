@@ -17,8 +17,11 @@ export const Input = styled.input`
   &:focus {
     background-color: #ecdbb8;
     box-shadow: inset 8px 0px 4px -8px #e39827,inset -8px 0px 4px -8px #e39827,inset 0px -10px 2px -8px #e3e3e3,inset 0px 9px 1px -8px #000;
+  }
 
-
-    /* box-shadow: */
+  
+  /* Temporary */
+  &:disabled {
+    filter: brightness(0.8);
   }
 `;
