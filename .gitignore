@@ -1,4 +1,4 @@
 node_modules/
 dist/
-.Ds-store
+.DS_Store
 docs/
