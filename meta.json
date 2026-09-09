@@ -27,15 +27,26 @@
       "namedExport": "button",
       "meta": {}
     },
-    "select--select": {
+    "input--select": {
       "name": "Select",
       "levels": [
-        "Select"
+        "Input"
       ],
-      "locStart": 6,
-      "locEnd": 17,
-      "filePath": "src/stories/select.stories.tsx",
+      "locStart": 7,
+      "locEnd": 44,
+      "filePath": "src/stories/input.stories.tsx",
       "namedExport": "select",
+      "meta": {}
+    },
+    "input--text": {
+      "name": "Text",
+      "levels": [
+        "Input"
+      ],
+      "locStart": 47,
+      "locEnd": 52,
+      "filePath": "src/stories/input.stories.tsx",
+      "namedExport": "Text",
       "meta": {}
     },
     "welcome--welcome": {
