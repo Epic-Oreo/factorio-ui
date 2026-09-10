@@ -1,7 +1,5 @@
 import { Select } from "@/components";
 import { Option } from "@/components/Select/select";
-// import "@/global.css";
-import "./story.css";
 import { Input } from "@/components/Input";
 
 export const select = () => (

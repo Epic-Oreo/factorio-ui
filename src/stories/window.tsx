@@ -6,7 +6,6 @@ import {
   WindowHeaderButton,
   WindowHeaderText,
 } from "@/components/Window/window";
-import "@/global.css";
 
 export const Window = () => (
   <div className="flex flex-col gap-2">

@@ -1,5 +1,4 @@
 import { Button } from "@/components/Button/button";
-import "./story.css";
 import ExampleBlock from "./components/exampleBlock";
 
 export const button = () => (
