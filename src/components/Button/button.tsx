@@ -1,5 +1,3 @@
-import { ComponentProps, type ReactNode } from "react";
-
 import styled from "@emotion/styled";
 import { elementResetStyle, glow, palette, shadows } from "@/theme";
 
@@ -81,19 +79,19 @@ const buttons = {
   },
 } as Record<string, ButtonStyleType>;
 
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ColorVariant;
+  arrow?: boolean;
+}
+
 export const Button = ({
   children,
   className,
   variant = "gray",
   arrow = false,
   ...props
-}: {
-  children?: ReactNode;
-  variant?: ColorVariant;
-  arrow?: boolean;
-  className?: string;
-  props?: ComponentProps<"button">;
-}) => {
+}: ButtonProps) => {
   return (
     <ButtonStyled
       className={className}
