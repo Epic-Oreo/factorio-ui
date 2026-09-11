@@ -2,7 +2,7 @@ import { Select } from "@/components";
 import { Option } from "@/components/Select/select";
 import { Input } from "@/components/Input";
 
-export const select = () => (
+export const SelectInput = () => (
   <div className="flex flex-col gap-4">
     <div className="w-full rounded bg-amber-100 flex items-center p-2 gap-4">
       <svg
@@ -42,7 +42,7 @@ export const select = () => (
 );
 
 
-export const Text = () => (
+export const TextInput = () => (
   <div className="flex flex-wrap gap-4">
     <Input/>
     <Input disabled/>
