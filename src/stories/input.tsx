@@ -1,9 +1,13 @@
 import { Select } from "@/components";
 import { Option } from "@/components/Select/select";
 import { Input } from "@/components/Input";
+import ExampleBlock from "./components/exampleBlock";
 
 export const SelectInput = () => (
-  <div className="flex flex-col gap-4">
+  <div className="flex flex-col gap-2">
+    {/* Title */}
+    <h1 className="text-5xl mb-0">Select Input</h1>
+
     <div className="w-full rounded bg-amber-100 flex items-center p-2 gap-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -21,30 +25,58 @@ export const SelectInput = () => (
         <path d="M12 9v4" />
         <path d="M12 17h.01" />
       </svg>
-      
-      <span>
-        Firefox does not support <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::picker#browser_compatibility">::picker(select)</a> styling yet!
-      </span>
 
+      <span>
+        Firefox does not support{" "}
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::picker#browser_compatibility">
+          ::picker(select)
+        </a>{" "}
+        styling yet!
+      </span>
     </div>
 
-    <Select
-      style={{
-        width: "20rem",
-      }}
+    <ExampleBlock
+      codeContent={`
+<Select className="w-52">
+  <Option>Relevance</Option>
+  <Option>Downloads</Option>
+  <Option>Recently Updated</Option>
+  <Option>Trending</Option>
+</Select>  
+    `.trim()}
     >
-      <Option>Relevance</Option>
-      <Option>Downloads</Option>
-      <Option>Recently Updated</Option>
-      <Option>Trending</Option>
-    </Select>
+      <Select className="w-52">
+        <Option>Relevance</Option>
+        <Option>Downloads</Option>
+        <Option>Recently Updated</Option>
+        <Option>Trending</Option>
+      </Select>
+    </ExampleBlock>
   </div>
 );
 
-
 export const TextInput = () => (
-  <div className="flex flex-wrap gap-4">
-    <Input/>
-    <Input disabled/>
+  <div className="flex flex-col gap-2">
+    {/* Title */}
+    <h1 className="text-5xl mb-0">Text Input</h1>
+
+    <ExampleBlock
+      codeContent={`
+<Input/>
+    `.trim()}
+    >
+      <Input />
+    </ExampleBlock>
+
+    <div>
+      <h2 className="mb-1 text-2xl"># Disabled</h2>
+      <ExampleBlock
+        codeContent={`
+<Input disabled />
+    `.trim()}
+      >
+        <Input disabled />
+      </ExampleBlock>
+    </div>
   </div>
-)
+);
