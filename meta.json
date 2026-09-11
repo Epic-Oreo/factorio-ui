@@ -5,48 +5,48 @@
     "version": 1
   },
   "stories": {
-    "button--arrow-buttons": {
-      "name": "Arrow buttons",
-      "levels": [
-        "Button"
-      ],
-      "locStart": 24,
-      "locEnd": 34,
-      "filePath": "src/stories/button.stories.tsx",
-      "namedExport": "arrowButtons",
-      "meta": {}
-    },
-    "button--button": {
+    "all-components--button": {
       "name": "Button",
       "levels": [
-        "Button"
+        "All components"
       ],
-      "locStart": 4,
-      "locEnd": 22,
-      "filePath": "src/stories/button.stories.tsx",
+      "locStart": 3,
+      "locEnd": 3,
+      "filePath": "src/stories/all-components.stories.tsx",
       "namedExport": "button",
       "meta": {}
     },
-    "input--select": {
-      "name": "Select",
+    "all-components--select-input": {
+      "name": "Select input",
       "levels": [
-        "Input"
+        "All components"
       ],
-      "locStart": 7,
-      "locEnd": 44,
-      "filePath": "src/stories/input.stories.tsx",
-      "namedExport": "select",
+      "locStart": 4,
+      "locEnd": 4,
+      "filePath": "src/stories/all-components.stories.tsx",
+      "namedExport": "SelectInput",
       "meta": {}
     },
-    "input--text": {
-      "name": "Text",
+    "all-components--text-input": {
+      "name": "Text input",
       "levels": [
-        "Input"
+        "All components"
       ],
-      "locStart": 47,
-      "locEnd": 52,
-      "filePath": "src/stories/input.stories.tsx",
-      "namedExport": "Text",
+      "locStart": 4,
+      "locEnd": 4,
+      "filePath": "src/stories/all-components.stories.tsx",
+      "namedExport": "TextInput",
+      "meta": {}
+    },
+    "all-components--window": {
+      "name": "Window",
+      "levels": [
+        "All components"
+      ],
+      "locStart": 5,
+      "locEnd": 5,
+      "filePath": "src/stories/all-components.stories.tsx",
+      "namedExport": "Window",
       "meta": {}
     },
     "welcome--welcome": {
@@ -54,21 +54,10 @@
       "levels": [
         "Welcome"
       ],
-      "locStart": 11,
-      "locEnd": 31,
+      "locStart": 16,
+      "locEnd": 38,
       "filePath": "src/stories/welcome.stories.tsx",
       "namedExport": "Welcome",
-      "meta": {}
-    },
-    "window--window": {
-      "name": "Window",
-      "levels": [
-        "Window"
-      ],
-      "locStart": 11,
-      "locEnd": 41,
-      "filePath": "src/stories/window.stories.tsx",
-      "namedExport": "Window",
       "meta": {}
     }
   }
