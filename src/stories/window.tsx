@@ -13,7 +13,7 @@ export const Window = () => (
     {/* Title */}
     <h1 className="text-5xl mb-0">Button</h1>
 
-    <ExampleBlock
+    <ExampleBlock collapsable
       codeContent={`<WindowBase className={"w-96"}>
   <WindowHeader>
     <WindowHeaderText>Header</WindowHeaderText>
