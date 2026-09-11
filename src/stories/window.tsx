@@ -11,7 +11,7 @@ import ExampleBlock from "./components/exampleBlock";
 export const Window = () => (
   <div className="flex flex-col gap-2">
     {/* Title */}
-    <h1 className="text-5xl mb-0">Button</h1>
+    <h1 className="text-5xl mb-0">Window</h1>
 
     <ExampleBlock collapsable
       codeContent={`<WindowBase className={"w-96"}>
